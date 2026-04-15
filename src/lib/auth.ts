@@ -3,5 +3,5 @@ import { authOptions } from "./authOptions";
 
 export async function getUserToken() {
   const session = await getServerSession(authOptions);
-  return session?.token; 
+  return session?.token;
 }
