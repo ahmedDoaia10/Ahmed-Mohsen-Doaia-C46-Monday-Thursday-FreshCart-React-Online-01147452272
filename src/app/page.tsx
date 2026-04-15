@@ -1,9 +1,17 @@
+import HomeClient from "@/components/home/HomeClient";
+import { getAllCategories, getAllProducts } from "@/services/product.services";
 
 
-export default function Home() {
+export default async function Home() {
+  const [categoriesRes, productsRes] = await Promise.all([
+    getAllCategories(),
+    getAllProducts(),
+  ]);
+
   return (
-    <>
-    <h1 className="text-center">Home Page</h1>
-    </>
+    <HomeClient
+      categories={categoriesRes.data}
+      products={productsRes.data}
+    />
   );
 }
