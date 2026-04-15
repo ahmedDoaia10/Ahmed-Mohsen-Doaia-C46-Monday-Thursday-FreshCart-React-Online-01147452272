@@ -66,9 +66,9 @@ export interface subcategoryI {
 export interface ShippDataI {
   shippingAddress: {
     details: string;
-    phone: number;
+    phone: string;
     city: string;
-    postalCode: number;
+    postalCode: string;
   };
 }
 
