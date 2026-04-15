@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { MapPin, Settings, Eye, EyeOff, Save, Lock } from "lucide-react";
 import { useSession } from "next-auth/react";
-import { GetProfile, UpdatePassword, UpdateProfile } from "@/actions/settings";
+import { GetProfile, UpdatePassword, UpdateProfile } from "@/actions/settings.action";
 import { toast } from "sonner";
 import { passwordSchema, profileSchema } from "@/schemas/settings.schemas";
 
